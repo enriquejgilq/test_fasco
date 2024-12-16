@@ -29,6 +29,10 @@ function NewArrivals() {
     ]
     return (
         <section id="new-arrivals" className="page flex justify-center items-center flex-col">
+           <p className="text-[46px] font-volkhov">Deals Of The Month</p>
+           <div className='w-[614px] font-poppins text-center p-4'>  
+           <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis ultrices sollicitudin aliquam sem. Scelerisque duis ultrices sollicitudin </p>
+           </div>
             <div className="flex justify-center gap-4 p-4  border-b">
                 {items.map((item, index) => (
                     <button

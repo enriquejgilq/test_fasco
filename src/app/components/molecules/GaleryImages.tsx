@@ -30,8 +30,8 @@ function GaleryImages() {
                         <Image
                             src={image.url}
                             alt={`Image ${index + 1}`}
-                            width={selectedIndex === index ? 450 : 350}
-                            height={selectedIndex === index ? 450 : 350}
+                            width={selectedIndex === index ? 350 : 250}
+                            height={selectedIndex === index ? 350 : 250}
                             className="transition-all duration-300 object-cover"
                             onClick={() => setSelectedIndex(index)}
                         />

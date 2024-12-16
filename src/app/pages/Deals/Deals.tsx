@@ -7,11 +7,11 @@ import { Button } from '@mui/material'
 
 export const Deals = () => {
     return (
-        <section id="deals" className="page flex justify-center    ">
+        <section id="deals" className="page flex justify-center">
             <div className="w-[1281px]">
                 <div className="flex flex-row justify-between gap-[19px] rounded-[10px] mt-10">
-                    <div className="  rounded-[10px] w-1/2">
-                        <div className="flex flex-col w-full ">
+                    <div className="rounded-[10px] w-1/2">
+                        <div className="flex flex-col w-full">
                             <p className="text-[59px] font-volkhov">Deals Of The Month</p>
                             <div className="flex w-[436px] flex-col items-start gap-[19px] ">
                                 <p>
