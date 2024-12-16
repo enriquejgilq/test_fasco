@@ -1,11 +1,10 @@
 "use client";
 import React, { useEffect } from "react";
-
 import NavBar from "./components/organisms/NavBar";
-import Login from "./pages/Login/Login";
+import Link from 'next/link';
 import { Deals } from "./pages/Deals/Deals";
-
 import InitialPage from "./pages/Home/Home";
+import NewArrivals from "./pages/NewArrivals/NewArrivals";
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import ArrowUpwardOutlinedIcon from '@mui/icons-material/ArrowUpwardOutlined';
 import { Link as ScrollLink } from 'react-scroll'
@@ -27,15 +26,12 @@ export default function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-
-
   return (<>
-
     <NavBar />
     <div>
       <InitialPage />
       <Deals />
-      
+      <NewArrivals />
       <div className="fixed bottom-0 right-0 flex flex-row justify-end gap-2 p-4">
         <button className="flex items-center justify-center bg-black text-white rounded-lg p-2">
           <ShoppingCartOutlinedIcon />
@@ -47,7 +43,6 @@ export default function Home() {
         </button>
       </div>
     </div>
-
   </>
   );
 }
