@@ -1,26 +1,34 @@
 import { Typography } from '@mui/material';
 import React from 'react';
 import Countdown from 'react-countdown';
+import Paper from '@mui/material/Paper';
 
 const CountdownTimer: React.FC = () => {
   const renderer = ({ days, hours, minutes, seconds }: any) => {
     return (
-      <div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
-        <div style={{fontFamily:'Orbitron'}}> 
-            
-          <Typography>{String(days).padStart(2, '0')}</Typography>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '50px' }}>
+        <div  >
+        <Paper className="h-[56px] w-[56px] flex items-center justify-center" >
+          <Typography className="font-quartz text-[32px]" >{String(days).padStart(2, '0')}</Typography>
+          </Paper>
           <span>Days</span>
         </div>
         <div>
-          <p>{String(hours).padStart(2, '0')}</p>
+          <Paper className="h-[56px] w-[56px] flex items-center justify-center" >
+            <p className="font-quartz text-[32px]">{String(hours).padStart(2, '0')}</p>
+          </Paper>
           <span>Hr</span>
         </div>
         <div>
-          <p  style={{fontFamily:'Orbitron'}}>{String(minutes).padStart(2, '0')}</p>
+          <Paper className="h-[56px] w-[56px] flex items-center justify-center" >
+            <p className="font-quartz text-[32px]">{String(minutes).padStart(2, '0')}</p>
+          </Paper>
           <span>Mins</span>
         </div>
         <div>
-          <p>{String(seconds).padStart(2, '0')}</p>
+          <Paper className="h-[56px] w-[56px] flex items-center justify-center" >
+            <p className="font-quartz text-[32px]">{String(seconds).padStart(2, '0')}</p>
+          </Paper>
           <span>Sec</span>
         </div>
       </div>
@@ -28,7 +36,8 @@ const CountdownTimer: React.FC = () => {
   };
 
   return (
-  <p style={{fontFamily:'Orbitron, sans-serif'}}>  1 23 </p>
+    <Countdown date={Date.now() + 10000000} renderer={renderer} />
+
   );
 };
 
