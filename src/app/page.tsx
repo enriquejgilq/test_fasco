@@ -8,6 +8,7 @@ import NewArrivals from "./pages/NewArrivals/NewArrivals";
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import ArrowUpwardOutlinedIcon from '@mui/icons-material/ArrowUpwardOutlined';
 import { Link as ScrollLink } from 'react-scroll'
+import Collections from "./pages/Collections/Collections";
 export default function Home() {
 
   useEffect(() => {
@@ -32,12 +33,13 @@ export default function Home() {
       <InitialPage />
       <Deals />
       <NewArrivals />
-      <div className="fixed bottom-0 right-0 flex flex-row justify-end gap-2 p-4">
-        <button className="flex items-center justify-center bg-black text-white rounded-lg p-2">
+      <Collections/>
+      <div className="fixed bottom-0 right-0 flex flex-col gap-2 p-4 md:flex-row md:bottom-4 md:right-4">
+        <button className="flex items-center justify-center bg-black text-white rounded-lg p-2 mb-2 md:mb-0">
           <ShoppingCartOutlinedIcon />
         </button>
         <button className="flex items-center justify-center bg-black text-white rounded-lg p-2">
-          <ScrollLink to="home" smooth={true} duration={500}  >
+          <ScrollLink to="home" smooth={true} duration={500}>
             <ArrowUpwardOutlinedIcon />
           </ScrollLink>
         </button>

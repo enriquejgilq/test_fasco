@@ -9,7 +9,7 @@ const CountdownTimer: React.FC = () => {
       <div style={{ display: 'flex', justifyContent: 'center', gap: '50px' }}>
         <div  >
         <Paper className="h-[56px] w-[56px] flex items-center justify-center" >
-          <Typography className="font-quartz text-[32px]" >{String(days).padStart(2, '0')}</Typography>
+          <p className="font-quartz text-[32px]" >{String(days).padStart(2, '0')}</p>
           </Paper>
           <span>Days</span>
         </div>
