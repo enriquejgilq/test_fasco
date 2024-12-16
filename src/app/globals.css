@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+:root {
+  --background: #ffffff;  /* Fondo blanco por defecto */
+  --foreground: #171717;  /* Texto negro por defecto */
+}
+
+body {
+  color: var(--foreground);  /* Usar la variable --foreground para el color del texto */
+  background: var(--background);  /* Usar la variable --background para el color de fondo */
+  font-family: 'Orbitron', sans-serif;  /* Usar la tipografía Orbitron */
+}
+
+.countdown-block {
+  font-family: 'Orbitron', sans-serif;
+}
