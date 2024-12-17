@@ -1,5 +1,5 @@
 import React from 'react';
-import LoginImage from '../components/assets/login';  
+import LoginImage from '../components/assets/login';
 import { Button } from '@mui/material';
 
 export default function Login() {
