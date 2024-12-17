@@ -31,8 +31,6 @@ export const Deals = () => {
                             </div>
                         </div>
                     </div>
-
-                   
                     <div className="flex flex-col w-full md:w-1/2 p-5">
                         <div className="flex justify-center md:justify-start" style={{ height: '582px' }}>
                             <GaleryImages />
