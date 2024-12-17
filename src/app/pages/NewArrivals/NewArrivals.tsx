@@ -83,7 +83,7 @@ function NewArrivals() {
                 ))}
             </div>
             <button
-                className="px-4 py-2 rounded-lg text-sm text-base  bg-black text-white  font-poppins" >View More
+                className="px-4 py-2 rounded-lg text-sm text-base  bg-black text-white font-bold font-poppins" >View More
             </button>
         </section>
     )

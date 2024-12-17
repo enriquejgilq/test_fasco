@@ -10,6 +10,8 @@ import ArrowUpwardOutlinedIcon from '@mui/icons-material/ArrowUpwardOutlined';
 import { Link as ScrollLink } from 'react-scroll'
 import Collections from "./pages/Collections/Collections";
 import Customers from "./pages/Customers/Customers";
+import Suscribe from "./pages/Suscribe/Suscribe";
+import Footer from "./components/organisms/Footer";
 export default function Home() {
 
   useEffect(() => {
@@ -37,6 +39,8 @@ export default function Home() {
       <Collections/>
       <InstagramPanel />
       <Customers/>
+      <Suscribe/>
+      <Footer/>
       <div className="fixed bottom-0 right-0 flex flex-col gap-2 p-4 md:flex-row md:bottom-4 md:right-4">
         <button className="flex items-center justify-center bg-black text-white rounded-lg p-2 mb-2 md:mb-0">
           <ShoppingCartOutlinedIcon />
