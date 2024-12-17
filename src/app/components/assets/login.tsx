@@ -3,7 +3,7 @@ const SvgComponent: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
     <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
-    width={949}
+    width={800}
     height={1077}
     fill="none"
     {...props}

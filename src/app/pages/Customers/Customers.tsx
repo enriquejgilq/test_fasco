@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import Divider from '@mui/material/Divider';
 import img1 from '../../components/assets/imgs/customers/image_1.png'
 import img2 from '../../components/assets/imgs/customers/image_2.png'
 import img3 from '../../components/assets/imgs/customers/image_3.png'
@@ -50,7 +51,7 @@ function Customers() {
                     </p>
                 </div>
 
-                <div className="flex justify-center mt-10 overflow-hidden relative h-screen">
+                <div className="flex justify-center mt-10 overflow-hidden relative h-[570px]">
                     {testimonials.map((testimonial, index) => {
                         const isActive = index === current;
                         const isPrev = (current - 1 + length) % length === index;
@@ -83,12 +84,13 @@ function Customers() {
                                             alt={testimonial.name}
                                             className="w-[242px] h-[242px] object-cover mb-4"
                                         />
-                                        <div className="flex flex-col ml-4">
-                                            <p className="text-gray-600 mb-2">{testimonial.comment}</p>
+                                        <div className="flex flex-col ml-4 flex text-left">
+                                            <p className="text-gray-600 mb-2 font-poppins ">{testimonial.comment}</p>
                                             <div className="text-yellow-400 mb-2">
                                                 {"★".repeat(testimonial.rating)}
                                                 {"☆".repeat(5 - testimonial.rating)}
                                             </div>
+                                            <Divider  sx={{backgroundColor:'black', width:'200px'}}/>
                                             <h3 className="text-lg font-bold">{testimonial.name}</h3>
                                             <p className="text-gray-500 text-sm">{testimonial.role}</p>
                                         </div>
