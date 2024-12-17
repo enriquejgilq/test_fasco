@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
-import Image from "next/image"
-import img1 from '../../components/assets/imgs/new-arrivals-images/Images_1.png'
-import img2 from '../../components/assets/imgs/new-arrivals-images/Images_2.png'
-import img3 from '../../components/assets/imgs/new-arrivals-images/Images_3.png'
-import img4 from '../../components/assets/imgs/new-arrivals-images/Images_4.png'
-import img5 from '../../components/assets/imgs/new-arrivals-images/Images_5.png'
-import img6 from '../../components/assets/imgs/new-arrivals-images/Images_6.png'
+import React, { useState } from 'react';
+import Image from "next/image";
+import img1 from '../../components/assets/imgs/new-arrivals-images/Images_1.png';
+import img2 from '../../components/assets/imgs/new-arrivals-images/Images_2.png';
+import img3 from '../../components/assets/imgs/new-arrivals-images/Images_3.png';
+import img4 from '../../components/assets/imgs/new-arrivals-images/Images_4.png';
+import img5 from '../../components/assets/imgs/new-arrivals-images/Images_5.png';
+import img6 from '../../components/assets/imgs/new-arrivals-images/Images_6.png';
 
 import StarOutlineIcon from '@mui/icons-material/StarOutline';
 
@@ -26,19 +26,22 @@ function NewArrivals() {
         { description: 'White Dress', oterDescription: 'Al Karam', numberStar: 5, reviews: '(4.1k) Customer Reviews', img: img4, price: '$95.50', sold: 'Almost Sold Out' },
         { description: 'Colorful Dress', oterDescription: 'Al Karam', numberStar: 5, reviews: '(4.1k) Customer Reviews', img: img5, price: '$95.50', sold: 'Almost Sold Out' },
         { description: 'White Shirt', oterDescription: 'Al Karam', numberStar: 5, reviews: '(4.1k) Customer Reviews', img: img6, price: '$95.50', sold: 'Almost Sold Out' },
-    ]
+    ];
+
     return (
-        <section id="new-arrivals" className="page flex justify-center items-center flex-col">
-           <p className="text-[46px] font-volkhov">Deals Of The Month</p>
-           <div className='w-[614px] font-poppins text-center p-4'>  
-           <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis ultrices sollicitudin aliquam sem. Scelerisque duis ultrices sollicitudin </p>
-           </div>
-            <div className="flex justify-center gap-4 p-4  border-b">
+        <section id="new-arrivals" className="page flex justify-center items-center flex-col px-4">
+            <p className="text-[32px] sm:text-[46px] font-volkhov text-center">Deals Of The Month</p>
+            <div className="w-full sm:w-[614px] font-poppins text-center p-4">
+                <p className="text-sm sm:text-base">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis ultrices sollicitudin aliquam sem. Scelerisque duis ultrices sollicitudin.
+                </p>
+            </div>
+            <div className="flex flex-wrap justify-center gap-4 p-4 border-b">
                 {items.map((item, index) => (
                     <button
                         key={index}
-                        className={`px-4 py-2 rounded-lg text-sm text-base transition-colors duration-300
-            ${activeIndex === index ? "bg-black text-white" : "bg-transparent text-black hover:bg-gray-200 font-poppins "}`}
+                        className={`px-4 py-2 rounded-lg text-sm sm:text-base transition-colors duration-300
+            ${activeIndex === index ? "bg-black text-white" : "bg-transparent text-black hover:bg-gray-200 font-poppins"}`}
                         onClick={() => setActiveIndex(index)}
                     >
                         {item}
@@ -67,8 +70,7 @@ function NewArrivals() {
                                     {[...Array(5)].map((_, i) => (
                                         <StarOutlineIcon
                                             key={i}
-                                            className={`h-5 w-5 ${i < item.numberStar ? "text-yellow-500" : "text-gray-300"
-                                                }`}
+                                            className={`h-5 w-5 ${i < item.numberStar ? "text-yellow-500" : "text-gray-300"}`}
                                         />
                                     ))}
                                 </div>
@@ -82,11 +84,11 @@ function NewArrivals() {
                     </div>
                 ))}
             </div>
-            <button
-                className="px-4 py-2 rounded-lg text-sm text-base  bg-black text-white font-bold font-poppins" >View More
+            <button className="px-4 py-2 rounded-lg text-sm sm:text-base bg-black text-white font-bold font-poppins">
+                View More
             </button>
         </section>
-    )
+    );
 }
 
-export default NewArrivals
+export default NewArrivals;
