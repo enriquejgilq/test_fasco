@@ -1,14 +1,15 @@
 "use client";
 import React, { useEffect } from "react";
 import NavBar from "./components/organisms/NavBar";
-import Link from 'next/link';
 import { Deals } from "./pages/Deals/Deals";
 import InitialPage from "./pages/Home/Home";
 import NewArrivals from "./pages/NewArrivals/NewArrivals";
+import InstagramPanel from './pages/InstagramPane/InstagramPanel'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import ArrowUpwardOutlinedIcon from '@mui/icons-material/ArrowUpwardOutlined';
 import { Link as ScrollLink } from 'react-scroll'
 import Collections from "./pages/Collections/Collections";
+import Customers from "./pages/Customers/Customers";
 export default function Home() {
 
   useEffect(() => {
@@ -34,6 +35,8 @@ export default function Home() {
       <Deals />
       <NewArrivals />
       <Collections/>
+      <InstagramPanel />
+      <Customers/>
       <div className="fixed bottom-0 right-0 flex flex-col gap-2 p-4 md:flex-row md:bottom-4 md:right-4">
         <button className="flex items-center justify-center bg-black text-white rounded-lg p-2 mb-2 md:mb-0">
           <ShoppingCartOutlinedIcon />
